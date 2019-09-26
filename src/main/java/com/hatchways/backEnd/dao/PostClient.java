@@ -22,7 +22,7 @@ public class PostClient {
 
     @Async
     public CompletableFuture<PostBean> getPostsByTag(String tagName) throws  JSONException {
-        String url = "https://hatchways.io/api/assessment/blog/posts?tag="+tagName;
+        String url = "API_URL/posts?tag="+tagName;
 
         JsonNode response = restTemplate.getForObject(url, JsonNode.class);
 
